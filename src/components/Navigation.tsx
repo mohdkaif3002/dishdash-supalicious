@@ -27,12 +27,12 @@ export function Navigation() {
       <div className="container flex h-16 items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-3">
-          <LogoProcessor 
-            originalImageUrl="/lovable-uploads/388f2e98-a0c8-4dd6-8225-c328141f2c57.png" 
+          <img 
+            src="/lovable-uploads/cravecart-logo-main.png" 
             alt="CraveCart Logo" 
             className="h-10 w-10 object-contain"
           />
-          <span className="text-xl font-croissant text-primary tracking-wide">CraveCart</span>
+          <span className="text-xl font-semibold text-primary tracking-wide">CraveCart</span>
         </Link>
 
         {/* Search Bar - Hidden on mobile */}
