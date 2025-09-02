@@ -8,30 +8,29 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* CraveCart Design System */
-    --background: 0 0% 100%;
+    /* CraveCart Official Brand Colors */
+    --background: 0 0% 100%; /* #FFFFFF */
     --foreground: 0 0% 20%; /* #333333 */
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 20%;
+    --card: 0 0% 97%; /* #F8F8F8 */
+    --card-foreground: 0 0% 20%; /* #333333 */
 
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 20%;
 
     /* Primary - Tomato #FF6347 */
-    --primary: 9 100% 64%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 9 100% 64%; /* #FF6347 */
+    --primary-foreground: 0 0% 100%; /* #FFFFFF */
 
-    /* Secondary - Gold #FFD700 */
-    --secondary: 51 100% 50%;
-    --secondary-foreground: 0 0% 20%;
+    /* Secondary text */
+    --secondary: 0 0% 40%; /* #666666 */
+    --secondary-foreground: 0 0% 100%;
 
-    /* Off-white background */
     --muted: 0 0% 97%; /* #F8F8F8 */
     --muted-foreground: 0 0% 40%; /* #666666 */
 
-    --accent: 51 100% 50%; /* Gold */
-    --accent-foreground: 0 0% 20%;
+    --accent: 9 100% 64%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%; /* #DC3545 */
     --destructive-foreground: 0 0% 100%;
@@ -39,15 +38,15 @@ All colors MUST be HSL.
     --success: 134 61% 41%; /* #28A745 */
     --success-foreground: 0 0% 100%;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
+    --border: 220 13% 91%; /* #E5E7EB */
+    --input: 220 13% 91%;
     --ring: 9 100% 64%; /* Primary tomato */
 
     --radius: 0.75rem;
 
-    /* Text colors */
+    /* Brand-specific text colors */
     --text-primary: 0 0% 20%; /* #333333 */
-    --text-secondary: 0 0% 40%; /* #666666 */
+    --secondary-text: 0 0% 40%; /* #666666 */
     --text-subtle: 0 0% 60%; /* #999999 */
 
     --sidebar-background: 0 0% 98%;
@@ -106,5 +105,6 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
   }
 }

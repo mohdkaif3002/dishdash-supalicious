@@ -26,10 +26,14 @@ export function Navigation() {
       <div className="container flex h-16 items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-2">
-          <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
-            <span className="text-white font-bold text-lg">C</span>
+          <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center shadow-md">
+            {/* CraveCart Logo - C shaped like location pin with fork */}
+            <svg className="h-5 w-5 text-primary-foreground" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm-1 8h2v6h-2v-6zm0-4h2v2h-2V6z"/>
+            </svg>
           </div>
-          <span className="text-xl font-bold text-primary">CraveCart</span>
+          <span className="text-xl font-extrabold text-primary">Crave</span>
+          <span className="text-xl font-light text-foreground">Cart</span>
         </Link>
 
         {/* Search Bar - Hidden on mobile */}
@@ -38,13 +42,13 @@ export function Navigation() {
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
             <Input
               placeholder="Find your next craving..."
-              className="pl-10 pr-4"
+              className="pl-10 pr-4 border-border bg-background rounded-md focus:ring-2 focus:ring-ring focus:border-ring shadow-sm"
             />
           </div>
         </div>
 
         {/* Location */}
-        <div className="hidden sm:flex items-center text-sm text-muted-foreground">
+        <div className="hidden sm:flex items-center text-sm text-secondary-text">
           <MapPin className="h-4 w-4 mr-1" />
           <span>Location</span>
         </div>
@@ -118,12 +122,12 @@ export function Navigation() {
       </div>
 
       {/* Mobile Search */}
-      <div className="md:hidden border-t p-4">
+      <div className="md:hidden border-t border-border p-4 bg-background">
         <div className="relative w-full">
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
           <Input
             placeholder="Find your next craving..."
-            className="pl-10 pr-4"
+            className="pl-10 pr-4 border-border bg-background rounded-md focus:ring-2 focus:ring-ring focus:border-ring shadow-sm"
           />
         </div>
       </div>

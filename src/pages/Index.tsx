@@ -55,20 +55,23 @@ const Index = () => {
       <section className="relative bg-gradient-to-br from-primary/5 via-secondary/5 to-background py-20">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-4">
               Your Next Meal,{' '}
               <span className="text-primary">Faster</span> and{' '}
-              <span className="text-secondary">Fresher</span>
+              <span className="text-primary">Fresher</span>
             </h1>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-lg md:text-xl text-primary font-medium mb-6">
+              From Craving to Doorstep
+            </p>
+            <p className="text-lg text-secondary-text mb-8">
               Discover amazing restaurants and get your favorite food delivered in minutes
             </p>
             
             <div className="flex items-center max-w-md mx-auto mb-8">
               <div className="relative flex-1">
-                <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-5 w-5" />
-                <div className="pl-10 pr-4 py-3 border rounded-l-lg bg-background">
-                  <span className="text-sm text-muted-foreground">Delhi, India</span>
+                <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-secondary-text h-5 w-5" />
+                <div className="pl-10 pr-4 py-3 border border-border rounded-l-lg bg-background shadow-sm">
+                  <span className="text-sm text-secondary-text">Delhi, India</span>
                 </div>
               </div>
               <Button className="rounded-l-none px-8 py-3 h-auto">
@@ -77,15 +80,15 @@ const Index = () => {
             </div>
 
             <div className="flex flex-wrap justify-center gap-4 mb-12">
-              <Badge variant="secondary" className="px-4 py-2">
+              <Badge variant="secondary" className="px-4 py-2 bg-card border border-border shadow-sm">
                 <Clock className="w-4 h-4 mr-2" />
                 30 min delivery
               </Badge>
-              <Badge variant="secondary" className="px-4 py-2">
+              <Badge variant="secondary" className="px-4 py-2 bg-card border border-border shadow-sm">
                 <Star className="w-4 h-4 mr-2" />
                 Top rated restaurants
               </Badge>
-              <Badge variant="secondary" className="px-4 py-2">
+              <Badge variant="secondary" className="px-4 py-2 bg-card border border-border shadow-sm">
                 <Utensils className="w-4 h-4 mr-2" />
                 Fresh ingredients
               </Badge>
@@ -107,10 +110,10 @@ const Index = () => {
               { name: 'Thai', emoji: '🍜' },
               { name: 'Japanese', emoji: '🍱' },
             ].map((cuisine) => (
-              <Card key={cuisine.name} className="cursor-pointer hover:shadow-lg transition-shadow">
+              <Card key={cuisine.name} className="cursor-pointer bg-card border border-border rounded-xl shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                 <CardContent className="p-6 text-center">
                   <div className="text-4xl mb-2">{cuisine.emoji}</div>
-                  <h3 className="font-semibold">{cuisine.name}</h3>
+                  <h3 className="font-semibold text-card-foreground">{cuisine.name}</h3>
                 </CardContent>
               </Card>
             ))}
@@ -197,13 +200,18 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
-                  <span className="text-white font-bold text-lg">C</span>
+                <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center shadow-md">
+                  <svg className="h-5 w-5 text-primary-foreground" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm-1 8h2v6h-2v-6zm0-4h2v2h-2V6z"/>
+                  </svg>
                 </div>
-                <span className="text-xl font-bold text-primary">CraveCart</span>
+                <div>
+                  <span className="text-xl font-extrabold text-primary">Crave</span>
+                  <span className="text-xl font-light text-foreground">Cart</span>
+                </div>
               </div>
-              <p className="text-muted-foreground">
-                Your Next Meal, Faster and Fresher
+              <p className="text-secondary-text">
+                From Craving to Doorstep
               </p>
             </div>
             

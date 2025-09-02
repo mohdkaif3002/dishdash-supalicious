@@ -21,7 +21,7 @@ interface RestaurantCardProps {
 export function RestaurantCard({ restaurant, estimatedDelivery = "25-30 mins", onClick }: RestaurantCardProps) {
   return (
     <Card 
-      className="cursor-pointer hover:shadow-lg transition-shadow duration-200 overflow-hidden"
+      className="cursor-pointer bg-card border border-border rounded-xl shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1 overflow-hidden"
       onClick={onClick}
     >
       <div className="relative">
@@ -41,14 +41,14 @@ export function RestaurantCard({ restaurant, estimatedDelivery = "25-30 mins", o
         
         {/* Overlay badges */}
         <div className="absolute top-3 left-3">
-          <Badge variant="secondary" className="bg-background/80 backdrop-blur-sm">
+          <Badge variant="secondary" className="bg-background/90 backdrop-blur-sm shadow-sm border border-border">
             ⚡ Fast Delivery
           </Badge>
         </div>
         
         {restaurant.avg_cost_for_two && (
           <div className="absolute top-3 right-3">
-            <Badge className="bg-primary text-white">
+            <Badge className="bg-primary text-primary-foreground shadow-md">
               ₹{Math.floor(restaurant.avg_cost_for_two / 100)} for two
             </Badge>
           </div>
