@@ -65,7 +65,8 @@ export default {
 				}
 			},
 			fontFamily: {
-				sans: ['Inter', 'sans-serif']
+				sans: ['Inter', 'sans-serif'],
+				'croissant': ['Croissant One', 'cursive']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

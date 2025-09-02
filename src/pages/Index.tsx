@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { Navigation } from '@/components/Navigation';
 import { RestaurantCard } from '@/components/RestaurantCard';
+import { LogoProcessor } from '@/components/LogoProcessor';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
@@ -55,7 +56,7 @@ const Index = () => {
       <section className="relative bg-gradient-to-br from-primary/5 via-secondary/5 to-background py-20">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-4">
+            <h1 className="text-4xl md:text-6xl font-croissant text-foreground mb-4">
               Your Next Meal,{' '}
               <span className="text-primary">Faster</span> and{' '}
               <span className="text-primary">Fresher</span>
@@ -194,13 +195,13 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-3 mb-4">
-                <img 
-                  src="/lovable-uploads/388f2e98-a0c8-4dd6-8225-c328141f2c57.png" 
+                <LogoProcessor 
+                  originalImageUrl="/lovable-uploads/388f2e98-a0c8-4dd6-8225-c328141f2c57.png" 
                   alt="CraveCart Logo" 
                   className="h-8 w-8 object-contain"
                 />
                 <div>
-                  <span className="text-xl font-bold text-primary">CraveCart</span>
+                  <span className="text-xl font-croissant text-primary">CraveCart</span>
                 </div>
               </div>
               <p className="text-secondary-text">
