@@ -25,15 +25,13 @@ export function Navigation() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex items-center space-x-2">
-          <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center shadow-md">
-            {/* CraveCart Logo - C shaped like location pin with fork */}
-            <svg className="h-5 w-5 text-primary-foreground" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm-1 8h2v6h-2v-6zm0-4h2v2h-2V6z"/>
-            </svg>
-          </div>
-          <span className="text-xl font-extrabold text-primary">Crave</span>
-          <span className="text-xl font-light text-foreground">Cart</span>
+        <Link to="/" className="flex items-center space-x-3">
+          <img 
+            src="/lovable-uploads/388f2e98-a0c8-4dd6-8225-c328141f2c57.png" 
+            alt="CraveCart Logo" 
+            className="h-10 w-10 object-contain"
+          />
+          <span className="text-xl font-bold text-primary tracking-wide">CraveCart</span>
         </Link>
 
         {/* Search Bar - Hidden on mobile */}
@@ -54,11 +52,11 @@ export function Navigation() {
         </div>
 
         {/* Auth Section */}
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-3">
           {/* Cart Icon */}
-          <Button variant="ghost" size="icon" className="relative">
+          <Button variant="ghost" size="icon" className="relative hover:bg-accent">
             <ShoppingCart className="h-5 w-5" />
-            <span className="absolute -top-1 -right-1 h-5 w-5 rounded-full bg-primary text-xs text-white flex items-center justify-center">
+            <span className="absolute -top-1 -right-1 h-5 w-5 rounded-full bg-primary text-xs text-primary-foreground flex items-center justify-center font-medium">
               0
             </span>
           </Button>
@@ -109,11 +107,11 @@ export function Navigation() {
               </DropdownMenuContent>
             </DropdownMenu>
           ) : (
-            <div className="flex items-center space-x-2">
-              <Button variant="ghost" asChild>
+            <div className="flex items-center space-x-3">
+              <Button variant="outline" asChild className="px-6">
                 <Link to="/auth">Sign In</Link>
               </Button>
-              <Button asChild>
+              <Button asChild className="px-6">
                 <Link to="/auth">Sign Up</Link>
               </Button>
             </div>

@@ -79,19 +79,13 @@ const Index = () => {
               </Button>
             </div>
 
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
-              <Badge variant="secondary" className="px-4 py-2 bg-card border border-border shadow-sm">
-                <Clock className="w-4 h-4 mr-2" />
-                30 min delivery
-              </Badge>
-              <Badge variant="secondary" className="px-4 py-2 bg-card border border-border shadow-sm">
-                <Star className="w-4 h-4 mr-2" />
-                Top rated restaurants
-              </Badge>
-              <Badge variant="secondary" className="px-4 py-2 bg-card border border-border shadow-sm">
-                <Utensils className="w-4 h-4 mr-2" />
-                Fresh ingredients
-              </Badge>
+             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-sm mx-auto">
+              <Button size="lg" className="text-lg px-8 py-4 font-semibold shadow-lg hover:shadow-xl">
+                Order Now
+              </Button>
+              <Button size="lg" variant="outline" className="text-lg px-8 py-4 font-medium border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground shadow-md hover:shadow-lg">
+                Browse Restaurants
+              </Button>
             </div>
           </div>
         </div>
@@ -126,7 +120,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center mb-8">
             <h2 className="text-3xl font-bold">Top Rated Restaurants</h2>
-            <Button variant="outline">View All</Button>
+            <Button variant="outline" className="px-6">View All</Button>
           </div>
 
           {loadingRestaurants ? (
@@ -156,11 +150,11 @@ const Index = () => {
             <div className="text-center py-12">
               <div className="text-6xl mb-4">🍽️</div>
               <h3 className="text-xl font-semibold mb-2">No restaurants found</h3>
-              <p className="text-muted-foreground">
+              <p className="text-muted-foreground mb-6">
                 Be the first restaurant owner to join CraveCart!
               </p>
               {user?.user_metadata?.user_role === 'restaurant_owner' && (
-                <Button className="mt-4">Add Your Restaurant</Button>
+                <Button className="px-6 py-3">Add Your Restaurant</Button>
               )}
             </div>
           )}
@@ -177,16 +171,16 @@ const Index = () => {
             Join thousands of food lovers who trust CraveCart for their daily meals
           </p>
           {!user ? (
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+              <Button size="lg" variant="secondary" className="px-8 py-4 font-semibold">
                 Sign Up Now
               </Button>
-              <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-primary">
+              <Button size="lg" variant="outline" className="text-white border-2 border-white hover:bg-white hover:text-primary font-medium px-8 py-4">
                 Become a Partner
               </Button>
             </div>
           ) : (
-            <Button size="lg" variant="secondary">
+            <Button size="lg" variant="secondary" className="px-8 py-4 font-semibold">
               <Search className="mr-2 h-5 w-5" />
               Start Ordering
             </Button>
@@ -199,15 +193,14 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center shadow-md">
-                  <svg className="h-5 w-5 text-primary-foreground" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm-1 8h2v6h-2v-6zm0-4h2v2h-2V6z"/>
-                  </svg>
-                </div>
+              <div className="flex items-center space-x-3 mb-4">
+                <img 
+                  src="/lovable-uploads/388f2e98-a0c8-4dd6-8225-c328141f2c57.png" 
+                  alt="CraveCart Logo" 
+                  className="h-8 w-8 object-contain"
+                />
                 <div>
-                  <span className="text-xl font-extrabold text-primary">Crave</span>
-                  <span className="text-xl font-light text-foreground">Cart</span>
+                  <span className="text-xl font-bold text-primary">CraveCart</span>
                 </div>
               </div>
               <p className="text-secondary-text">
